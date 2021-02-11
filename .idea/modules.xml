@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/01-Servlet/01-Servlet.iml" filepath="$PROJECT_DIR$/01-Servlet/01-Servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/02-Servlet声明周期/02-Servlet声明周期.iml" filepath="$PROJECT_DIR$/02-Servlet声明周期/02-Servlet声明周期.iml" />
       <module fileurl="file://$PROJECT_DIR$/03-HttpServletResponse介绍/03-HttpServletResponse介绍.iml" filepath="$PROJECT_DIR$/03-HttpServletResponse介绍/03-HttpServletResponse介绍.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-HttpServletRequest介绍/04-HttpServletRequest介绍.iml" filepath="$PROJECT_DIR$/04-HttpServletRequest介绍/04-HttpServletRequest介绍.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB.iml" filepath="$PROJECT_DIR$/WEB.iml" />
     </modules>
   </component>
