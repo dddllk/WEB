@@ -62,4 +62,41 @@ public class UserDao {
     }
     return list;
   }
+  // 用户删除
+  public int delete(int userId){
+    int result = 0;
+    String sql = "delete from users where userId=?";
+    PreparedStatement ps = util.createStatement(sql);
+    try {
+      ps.setInt(1, userId);
+      result = ps.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close();
+    }
+    return result;
+  }
+  // 验证登录
+  public int login(String userName, String password){
+    ResultSet rs = null;
+    PreparedStatement ps = null;
+    int result = 0;
+    String sql = "select count(*) from users where userName=? and password=?";
+
+    ps = util.createStatement(sql);
+    try {
+      ps.setString(1, userName);
+      ps.setString(2, password);
+      rs = ps.executeQuery();
+      while(rs.next()) {
+        result = rs.getInt("count(*)");
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close(rs);
+    }
+    return result;
+  }
 }
