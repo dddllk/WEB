@@ -7,8 +7,16 @@
         <servlet-name>UserAddServlet</servlet-name>
         <servlet-class>com.bjpowernode.controller.UserAddServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserFindServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.UserFindServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>UserAddServlet</servlet-name>
         <url-pattern>/user/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserFindServlet</servlet-name>
+        <url-pattern>/user/find</url-pattern>
     </servlet-mapping>
 </web-app>

@@ -4,7 +4,10 @@ import com.bjpowernode.entity.Users;
 import com.bjpowernode.util.JdbcUtil;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by dlkyy on 2021/2/12 15:41
@@ -30,5 +33,33 @@ public class UserDao {
       util.close();
     }
     return result;
+  }
+  // 用户查询
+  public List findAll(){
+    ResultSet rs = null;
+    String sql = "select *from Users";
+    Users user;
+    List list = new ArrayList();
+
+    PreparedStatement ps = util.createStatement(sql);
+
+    try {
+      rs = ps.executeQuery();
+      while(rs.next()) {
+        Integer userId = rs.getInt("userId");
+        String userName = rs.getString("userName");
+        String password = rs.getString("password");
+        String sex = rs.getString("sex");
+        String email = rs.getString("email");
+
+        user = new Users(userId, userName, password, sex, email);
+        list.add(user);
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close(rs);
+    }
+    return list;
   }
 }
