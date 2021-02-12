@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/03-HttpServletResponse介绍/03-HttpServletResponse介绍.iml" filepath="$PROJECT_DIR$/03-HttpServletResponse介绍/03-HttpServletResponse介绍.iml" />
       <module fileurl="file://$PROJECT_DIR$/04-HttpServletRequest介绍/04-HttpServletRequest介绍.iml" filepath="$PROJECT_DIR$/04-HttpServletRequest介绍/04-HttpServletRequest介绍.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-在线考试管理系统/05-在线考试管理系统.iml" filepath="$PROJECT_DIR$/05-在线考试管理系统/05-在线考试管理系统.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06-Http-302/06-Http-302.iml" filepath="$PROJECT_DIR$/06-Http-302/06-Http-302.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB.iml" filepath="$PROJECT_DIR$/WEB.iml" />
     </modules>
   </component>
