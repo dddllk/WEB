@@ -40,4 +40,8 @@
     <welcome-file-list>
         <welcome-file>login.html</welcome-file>
     </welcome-file-list>
+    <!--注册监听器-->
+    <listener>
+        <listener-class>com.bjpowernode.listener.Listener01</listener-class>
+    </listener>
 </web-app>

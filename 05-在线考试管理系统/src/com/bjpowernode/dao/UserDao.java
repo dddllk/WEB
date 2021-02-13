@@ -3,6 +3,7 @@ package com.bjpowernode.dao;
 import com.bjpowernode.entity.Users;
 import com.bjpowernode.util.JdbcUtil;
 
+import javax.servlet.http.HttpServletRequest;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -13,8 +14,33 @@ import java.util.List;
  * Created by dlkyy on 2021/2/12 15:41
  */
 public class UserDao {
-  private JdbcUtil util = new JdbcUtil();
+  private final JdbcUtil util = new JdbcUtil();
   // 用户注册
+  // JDBC规范中，Connection创建与销毁最浪费时间
+
+  //--- add方法重载 --- start
+  public int add(Users user, HttpServletRequest request){
+    int result = 0;
+    String sql = "insert into Users(userName,password,sex,email) values(?,?,?,?)";
+
+    PreparedStatement ps = util.createStatement(sql, request);
+
+    try {
+      ps.setString(1,user.getUserName());
+      ps.setString(2,user.getPassword());
+      ps.setString(3,user.getSex());
+      ps.setString(4,user.getEmail());
+      result = ps.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close(request);
+    }
+    return result;
+  }
+  //--- add方法重载 --- end
+
+  // add 方法
   public int add(Users user){
     int result = 0;
     String sql = "insert into Users(userName,password,sex,email) values(?,?,?,?)";
