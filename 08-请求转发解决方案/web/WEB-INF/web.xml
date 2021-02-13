@@ -4,15 +4,15 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
     <servlet>
-        <servlet-name>ServletTest01</servlet-name>
-        <servlet-class>com.bjpowernode.controller.ServletTest01</servlet-class>
+        <servlet-name>com.bjpowernode.listener.ServletListener</servlet-name>
+        <servlet-class>com.bjpowernode.controller.com.bjpowernode.listener.ServletListener</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletTest02</servlet-name>
         <servlet-class>com.bjpowernode.cotoller.ServletTest02</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ServletTest01</servlet-name>
+        <servlet-name>com.bjpowernode.listener.ServletListener</servlet-name>
         <url-pattern>/test01</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
