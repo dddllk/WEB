@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/12-ServletContextListenter/12-ServletContextListenter.iml" filepath="$PROJECT_DIR$/12-ServletContextListenter/12-ServletContextListenter.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-ServletContextAttributeListener/13-ServletContextAttributeListener.iml" filepath="$PROJECT_DIR$/13-ServletContextAttributeListener/13-ServletContextAttributeListener.iml" />
       <module fileurl="file://$PROJECT_DIR$/14-过滤器检测请求的合法性/14-过滤器检测请求的合法性.iml" filepath="$PROJECT_DIR$/14-过滤器检测请求的合法性/14-过滤器检测请求的合法性.iml" />
+      <module fileurl="file://$PROJECT_DIR$/15-过滤器对请求对象进行增强服务/15-过滤器对请求对象进行增强服务.iml" filepath="$PROJECT_DIR$/15-过滤器对请求对象进行增强服务/15-过滤器对请求对象进行增强服务.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB.iml" filepath="$PROJECT_DIR$/WEB.iml" />
     </modules>
   </component>
