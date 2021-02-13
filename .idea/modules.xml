@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/07-重定向解决方案/07-重定向解决方案.iml" filepath="$PROJECT_DIR$/07-重定向解决方案/07-重定向解决方案.iml" />
       <module fileurl="file://$PROJECT_DIR$/08-请求转发解决方案/08-请求转发解决方案.iml" filepath="$PROJECT_DIR$/08-请求转发解决方案/08-请求转发解决方案.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-全局作用域对象/09-全局作用域对象.iml" filepath="$PROJECT_DIR$/09-全局作用域对象/09-全局作用域对象.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10-Cookie/10-Cookie.iml" filepath="$PROJECT_DIR$/10-Cookie/10-Cookie.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB.iml" filepath="$PROJECT_DIR$/WEB.iml" />
     </modules>
   </component>
