@@ -20,7 +20,7 @@ public class QuestionUpdateServlet extends HttpServlet {
     Question question = null;
     QuestionDao dao = new QuestionDao();
     int result;
-    // 获取参数信息
+    // 调用请求对象读取请求头参数信息
     questionId = Integer.valueOf(req.getParameter("questionId"));
     title = req.getParameter("title");
     optionA = req.getParameter("optionA");
@@ -30,7 +30,7 @@ public class QuestionUpdateServlet extends HttpServlet {
     answer = req.getParameter("answer");
     // 将试题内容放入question对象中
     question = new Question(questionId,title,optionA,optionB,optionC,optionD,answer);
-    // 调用Dao
+    // 调用Dao实现更新
     result = dao.update(question, req);
     // 判断
     if(result == 1){
@@ -38,7 +38,7 @@ public class QuestionUpdateServlet extends HttpServlet {
     }else{
       req.setAttribute("info", "更新失败！");
     }
-    // 请求转发
+    // 调用question_success.jsp将结果写入到响应体中
     req.getRequestDispatcher("/question_success.jsp").forward(req,resp);
   }
 }
