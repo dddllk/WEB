@@ -29,6 +29,14 @@
         <servlet-name>QuestionFindServlet</servlet-name>
         <servlet-class>com.bjpowernode.controller.QuestionFindServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionShowDetailServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionShowDetailServlet</servlet-class>
+    </servlet>
 
     <!--用户-->
     <servlet-mapping>
@@ -55,6 +63,14 @@
     <servlet-mapping>
         <servlet-name>QuestionFindServlet</servlet-name>
         <url-pattern>/question/find</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionDeleteServlet</servlet-name>
+        <url-pattern>/question/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionShowDetailServlet</servlet-name>
+        <url-pattern>/question/show_detail</url-pattern>
     </servlet-mapping>
 
     <!--自定义默认欢迎资源文件规则-->

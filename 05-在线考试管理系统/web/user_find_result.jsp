@@ -17,6 +17,7 @@
         <td>选项C</td>
         <td>选项D</td>
         <td>正确答案</td>
+        <td colspan="2">操作</td>
     </tr>
     <%
      for(Question question : questionList){
@@ -27,16 +28,9 @@
        String optionC = question.getOptionC();
        String optionD = question.getOptionD();
        String answer = question.getAnswer();
-       if(questionId%2 == 0){
     %>
-        <tr bgcolor="green">
-    <%
-        }else if(questionId%2 == 1){
-    %>
-        <tr bgcolor="yellow">
-    <%
-        }
-    %>
+        <tr>
+
             <td><%=questionId%></td>
             <td><%=title%></td>
             <td><%=optionA%></td>
@@ -44,6 +38,10 @@
             <td><%=optionC%></td>
             <td><%=optionD%></td>
             <td><%=answer%></td>
+            <td>
+                <a href="/myWeb/question/delete?questionId=<%=questionId%>">删除试题</a>
+                <a href="/myWeb/question/show_detail?questionId=<%=questionId%>">试题详情</a>
+            </td>
         </tr>
     <%
       }

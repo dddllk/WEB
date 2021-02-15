@@ -70,5 +70,47 @@ public class QuestionDao {
     }
     return list;
   }
+  // 问题删除
+  public int delete(Integer questionId,HttpServletRequest request){
+    int result = 0;
+    String sql = "delete from question where questionId = ?";
+    PreparedStatement ps = util.createStatement(sql, request);
+    try {
+      ps.setInt(1, questionId);
+      result = ps.executeUpdate();
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close(request);
+    }
+    return result;
+  }
 
+  // 按问题编号查询
+  public Question findById(Integer questionId, HttpServletRequest req) {
+    Question question = null;
+    ResultSet rs = null;
+    String sql = "select * from question where questionId = ?";
+    PreparedStatement ps = util.createStatement(sql, req);
+
+    try {
+      ps.setInt(1, questionId);
+      rs = ps.executeQuery();
+      while(rs.next()){
+        String title = rs.getString("title");
+        String optionA = rs.getString("optionA");
+        String optionB = rs.getString("optionB");
+        String optionC = rs.getString("optionC");
+        String optionD = rs.getString("optionD");
+        String answer = rs.getString("answer");
+
+        question = new Question(questionId, title, optionA, optionB, optionC, optionD, answer);
+      }
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close(rs, req);
+    }
+    return question;
+  }
 }
