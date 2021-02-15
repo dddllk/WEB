@@ -41,12 +41,12 @@ public class QuestionDao {
     return result;
   }
   //问题查找
-  public List findAll(){
+  public List findAll(HttpServletRequest request){
     String sql = "select *from question";
     ResultSet rs = null;
     Question question;
     List<Question> list = new ArrayList();
-    PreparedStatement ps = util.createStatement(sql);
+    PreparedStatement ps = util.createStatement(sql, request);
 
     try {
       rs = ps.executeQuery();

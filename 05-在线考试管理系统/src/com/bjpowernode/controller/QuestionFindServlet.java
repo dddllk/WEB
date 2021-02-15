@@ -19,7 +19,7 @@ public class QuestionFindServlet extends HttpServlet {
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     // 从数据库中获取元素
     QuestionDao dao = new QuestionDao();
-    List<Question> questionList = dao.findAll();
+    List<Question> questionList = dao.findAll(req);
     // 将处理结果添加到请求作用域对象
     req.setAttribute("key", questionList);
     // 请求转发
