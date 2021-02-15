@@ -3,6 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <!--用户-->
     <servlet>
         <servlet-name>UserAddServlet</servlet-name>
         <servlet-class>com.bjpowernode.controller.UserAddServlet</servlet-class>
@@ -19,6 +20,17 @@
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.bjpowernode.controller.LoginServlet</servlet-class>
     </servlet>
+    <!--试题-->
+    <servlet>
+        <servlet-name>QuestionAddServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionAddServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <servlet-class>com.bjpowernode.controller.QuestionFindServlet</servlet-class>
+    </servlet>
+
+    <!--用户-->
     <servlet-mapping>
         <servlet-name>UserAddServlet</servlet-name>
         <url-pattern>/user/add</url-pattern>
@@ -34,6 +46,15 @@
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <!--试题-->
+    <servlet-mapping>
+        <servlet-name>QuestionAddServlet</servlet-name>
+        <url-pattern>/question/add</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>QuestionFindServlet</servlet-name>
+        <url-pattern>/question/find</url-pattern>
     </servlet-mapping>
 
     <!--自定义默认欢迎资源文件规则-->
