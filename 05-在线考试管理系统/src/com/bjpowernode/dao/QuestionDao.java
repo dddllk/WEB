@@ -113,4 +113,29 @@ public class QuestionDao {
     }
     return question;
   }
+
+  public int update(Question question, HttpServletRequest req) {
+    int result = 0;
+    String sql = "update question set title=?,optionA=?,optionB=?," +
+        "optionC=?,optionD=?,answer=? where questionId=?";
+    PreparedStatement ps = util.createStatement(sql, req);
+
+    try {
+      ps.setString(1, question.getTitle());
+      ps.setString(2, question.getOptionA());
+      ps.setString(3, question.getOptionB());
+      ps.setString(4, question.getOptionC());
+      ps.setString(5, question.getOptionD());
+      ps.setString(6, question.getAnswer());
+      ps.setInt(7, question.getQuestionId());
+
+      result = ps.executeUpdate();
+
+    } catch (SQLException e) {
+      e.printStackTrace();
+    } finally {
+      util.close(req);
+    }
+    return result;
+  }
 }

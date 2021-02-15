@@ -9,16 +9,6 @@
 
 <%
     // 获取结果
-    Integer result = (Integer)request.getAttribute("key");
+    String info = (String)request.getAttribute("info");
 %>
-<%
-    if(result == 1){
-%>
-    <font color="red" size="40px">添加成功！</font>
-<%
-    }else{
-%>
-    <font color="red" size="40px">添加失败！</font>
-<%
-    }
-%>
+<font size="40px" color="red"><%=info%></font>

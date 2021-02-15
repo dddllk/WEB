@@ -34,10 +34,15 @@ public class QuestionAddServlet extends HttpServlet {
 
     // 调用QuestionDao将获得的数据添加进数据库中
     int result = dao.add(question, req);
-    // 将处理结果添加到请求作用域对象
-    req.setAttribute("key", result);
+    if(result == 1){
+      // 将处理结果添加到请求作用域对象
+      req.setAttribute("info", "添加成功！");
+    }else{
+      // 将处理结果添加到请求作用域对象
+      req.setAttribute("info", "添加失败！");
+    }
     // 请求转发
-    req.getRequestDispatcher("/add_question_success.jsp").forward(req,resp);
+    req.getRequestDispatcher("/question_success.jsp").forward(req,resp);
   }
 
   @Override
