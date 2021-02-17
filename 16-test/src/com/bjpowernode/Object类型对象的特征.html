@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Object类型对象的特征</title>
+	<script type="text/javascript">
+		// 第一种维护方案----------------------start
+		var obj1 = new Object(); //JavaScript内置构造函数
+		// 新增属性
+		obj1.id = 123;
+		obj1.name = "dlkyy";
+		// 新增函数
+		obj1.sayHello = function (param){window.alert(obj1.name + "向" + param + "问好！");}
+		// 输出属性
+		window.alert("obj1.id = " + obj1.id + " obj1.name = " + obj1.name);
+		// 调用函数输出
+		obj1.sayHello("yy");
+		// 第一种维护方案----------------------end
+
+		window.alert("----------这是分割线-----------------")
+
+		// 第二种维护方案---------------------start
+		var obj2 = new Object();
+		obj2["deptNo"] = 10;
+		window.alert("obt2.deptNo = " + obj2.deptNo);
+
+		var departName = "dname";
+		obj2[departName] = "Operation"; //obj2.departName = "operation";
+		window.alert("obj2.dname = " + obj2.dname);
+		// 第二种维护方案---------------------end
+
+		window.alert("------------这是分割线---------------")
+		// 移出属性和方法
+		// departName
+		delete obj2[departName];
+		window.alert(obj2[departName]); //undefined
+	</script>
+</head>
+<body>
+</body>
+</html>

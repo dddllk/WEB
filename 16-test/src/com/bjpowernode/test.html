@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script>
+		function func1(){
+			// 获取input框
+			var content = document.getElementById("t1").value;
+			document.getElementById("one").innerText = content;
+		}
+	</script>
+</head>
+<body>
+<div style="width:200px;height: 200px; background-color: green" id="one"></div>
+<input type="text" id="t1"/>
+<input type="button" value="提交" onclick="func1()">
+</body>
+</html>

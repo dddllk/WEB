@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基于DOM对象实现监听事件的绑定</title>
+	<script>
+		function func1(){
+			this.style.backgroundColor = "blue";
+		}
+		function func2() {
+			this.style.backgroundColor = "white";
+		}
+		function main() {
+			var domArr = document.getElementsByTagName("tr");
+			for(var i = 1; i < domArr.length; i++) {
+				var trDom = domArr[i]
+				trDom.onmouseover = func1;//不是func1()
+				trDom.onmouseout = func2;
+			}
+		}
+	</script>
+</head>
+<body onload="main()" >
+<table border="1">
+	<tr>
+		<td><input type="checkbox" id="all">全选/全不选</td>
+		<td>项目编号</td>
+		<td>项目</td>
+		<td>技术名称</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="ck"></td>
+		<td>1</td>
+		<td>java项目</td>
+		<td>JAVA</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="ck"></td>
+		<td>2</td>
+		<td>WEB项目</td>
+		<td>SpringMVC</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="ck"></td>
+		<td>3</td>
+		<td>Mysql项目</td>
+		<td>mysql</td>
+	</tr>
+</table>
+</body>
+</html>

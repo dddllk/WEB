@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onkeyup事件</title>
+	<script>
+		var strs = ["arr","java","javascript","jquery",
+			"html","css","servlet","jdbc","jsp","mysql","mybatis",
+		  "springMvc","spring"];
+		function func(){
+			// 文本框内容
+			var content = document.getElementById("input1").value;
+			// div节点
+			var divDom = document.getElementById("div");
+			// 最终输出的字符串
+			var value = "";
+
+			//如果文本框内容是空串
+			if(content === ""){
+				divDom.style.display = "none";
+				return; // 程序结束
+			}
+
+			for(var i=0; i < strs.length; i++){
+				var str = strs[i];
+				if (str.indexOf(content) !== -1) {
+					value += str + "<br/>";
+				}
+			}
+			// 如果没有包含输入的字符串
+			if(value === ""){
+				divDom.style.display = "none";
+				return;
+			}
+			divDom.innerHTML = value;
+			divDom.style.display = "block";
+		}
+	</script>
+</head>
+<body>
+<img src="//www.baidu.com/img/dong_8f1d47bcb77d74a1e029d8cbb3b33854.gif"
+     width="270" height="129"><br>
+<input type="text" id="input1" onkeyup="func()"/><input type="button" value="百度一下">
+<div style="background-color:pink;width: 300px;height: 300px;display: none" id="div"></div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>基于DOM对象实现监听事件的绑定--综合案例</title>
+	<script>
+
+		// 页面加载的时候
+		function main(){
+			// 获取全选/全不选DOM对象
+			var allDomObj = document.getElementById("all");
+			// 鼠标点击全选/全不选时，绑定func1方法
+			allDomObj.onclick = func1;
+
+			// 当鼠标点击内容栏，绑定单击事件
+			var domArr = document.getElementsByName("ck");
+			for(var i = 0; i < domArr.length;i++){
+				domArr[i].onclick = func2;
+			}
+
+			// 获取所有的行数，除开标题行
+			var tdDomArr = document.getElementsByTagName("tr");
+			for(var j = 1; j < tdDomArr.length; j++) {
+				tdDomArr[j].onmouseover = func3;
+				tdDomArr[j].onmouseout = func4;
+			}
+		}
+
+		//功能1：根据标题栏的选中状态来决定内容栏的选中状态
+		function func1(){
+			// 获取全选/全不选DOM对象
+			var allDomObj = document.getElementById("all");
+			// 获取全选、全不选的状态
+			var flag = allDomObj.checked;
+			// 获取内容行dom对象
+			var domArr = document.getElementsByName("ck");
+			// 遍历domArr
+			for(var i = 0; i < domArr.length; i++){
+				var domObj = domArr[i];
+				domObj.checked = flag;
+			}
+		}
+
+		//功能2：根据内容栏的状态来决定标题栏的选中状态
+		function func2(){
+			// 获取所有的内容栏Dom对象
+			var domArr = document.getElementsByName("ck");
+			// 获取标题栏DOM
+			var allDomObj = document.getElementById("all");
+			// 参数用来统计内容栏选中的数量
+			var checkCount = 0;
+			// 循环内容栏DOM对象
+			for(var i = 0; i < domArr.length; i++) {
+			   var domObj = domArr[i];
+			   // 当内容栏选中一行时
+			   if(domObj.checked){
+			   	  //选中行数+1
+			   	  ++checkCount;
+			   }
+			   //当选中的行数和内容栏总共的行数相同时(标题栏的状态由选中的行数决定，不能在前面获取标题栏的状态)
+				allDomObj.checked = checkCount === domArr.length;
+			}
+		}
+
+		// 功能3：鼠标悬停功能
+		function func3(){
+			this.style.backgroundColor = "blue";
+			this.style.color = "red";
+		}
+		function func4() {
+			this.style.backgroundColor = "white";
+			this.style.color = "black";
+		}
+	</script>
+</head>
+<body onload="main()" >
+<table border="1">
+	<tr>
+		<td><input type="checkbox" id="all">全选/全不选</td>
+		<td>项目编号</td>
+		<td>项目</td>
+		<td>技术名称</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="ck"></td>
+		<td>1</td>
+		<td>java项目</td>
+		<td>JAVA</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="ck"></td>
+		<td>2</td>
+		<td>WEB项目</td>
+		<td>SpringMVC</td>
+	</tr>
+	<tr>
+		<td><input type="checkbox" name="ck"></td>
+		<td>3</td>
+		<td>Mysql项目</td>
+		<td>mysql</td>
+	</tr>
+</table>
+</body>
+</html>
