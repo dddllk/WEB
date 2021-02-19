@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JSON工具包的使用:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSON_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JSON工具包的使用/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JSON工具包的使用" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="json" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

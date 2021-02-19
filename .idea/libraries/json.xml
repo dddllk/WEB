@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="json">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/JSON工具包的使用/web/lib/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSON工具包的使用/web/lib/commons-collections-3.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSON工具包的使用/web/lib/commons-lang-2.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSON工具包的使用/web/lib/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSON工具包的使用/web/lib/ezmorph-1.0.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/JSON工具包的使用/web/lib/json-lib-2.4-jdk15.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
