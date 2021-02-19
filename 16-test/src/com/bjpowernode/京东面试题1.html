@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东面试题1</title>
+	<script type="text/javascript">
+		/**
+		 * 在java中存在一个HashMap类型
+		 * 以键值对方式存储
+		 * 一次可以存储多个键值对
+		 * 并且要求每一个关键字都是唯一
+		 * 读取可以通过给定关键字读取对应的值
+		 * 其具体使用方式如下
+		 * HashMap map = new HashMap();
+		 * map.put("key1", 100);
+		 * map.put("key2", 200);
+		 * map.get("key1") == 100;
+		 * map.get("key2") == 200;
+		 *
+		 * JavaScript中并不存在HashMap类型，要求在JavaScript中模拟出HashMap
+		 * 要求具有上述功能
+		 */
+		function HashMap(){
+			var obj = new Object(); // Object类型对象，
+			this.put = function(key, value){
+				obj[key] = value;
+			}
+			this.get = function(key) {
+			   return obj[key];
+			}
+		}
+		var map = new HashMap();
+		map.put("key1", "100");
+		map.put("key2", "200");
+		var num1 = map.get("key1");
+		window.alert(num1);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
