@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript this指向</title>
+	<script type="text/javascript">
+		// 全局变量
+		var sname = "allen";
+		// Student()也是全局变量 window.Student = function(){};
+		function Student(){
+			this.sid = 110;
+			this.sname = "dlkyy";
+		}
+		// Student(); // 普通函数调用,window.Student()  ==>window.sname = "dlkyy";
+		// window.alert("window.sname = " + window.sname);
+
+		window.alert("-------------这是分割线--------------")
+		var obj = new Student();
+		window.alert("window.sname = " + window.sname);
+	</script>
+</head>
+<body>
+
+</body>
+</html>
