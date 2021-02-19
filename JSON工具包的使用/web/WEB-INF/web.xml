@@ -7,8 +7,16 @@
         <servlet-name>ServletTest01</servlet-name>
         <servlet-class>com.bjpowernode.controller.ServletTest01</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletTest02</servlet-name>
+        <servlet-class>com.bjpowernode.controller.ServletTest02</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletTest01</servlet-name>
         <url-pattern>/test01</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletTest02</servlet-name>
+        <url-pattern>/test02</url-pattern>
     </servlet-mapping>
 </web-app>
