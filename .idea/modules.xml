@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/17-JSP文件使用展示/17-JSP文件使用展示.iml" filepath="$PROJECT_DIR$/17-JSP文件使用展示/17-JSP文件使用展示.iml" />
       <module fileurl="file://$PROJECT_DIR$/18-JSP文件内置对象/18-JSP文件内置对象.iml" filepath="$PROJECT_DIR$/18-JSP文件内置对象/18-JSP文件内置对象.iml" />
       <module fileurl="file://$PROJECT_DIR$/19-Servlet与JSP联合调用案例/19-Servlet与JSP联合调用案例.iml" filepath="$PROJECT_DIR$/19-Servlet与JSP联合调用案例/19-Servlet与JSP联合调用案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JSON实现服务端与JavaScript之间的数据通信/JSON实现服务端与JavaScript之间的数据通信.iml" filepath="$PROJECT_DIR$/JSON实现服务端与JavaScript之间的数据通信/JSON实现服务端与JavaScript之间的数据通信.iml" />
       <module fileurl="file://$PROJECT_DIR$/WEB.iml" filepath="$PROJECT_DIR$/WEB.iml" />
     </modules>
   </component>

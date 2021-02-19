@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="JSON实现服务端与JavaScript之间的数据通信:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/JSONJavaScript_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="JSON实现服务端与JavaScript之间的数据通信/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="JSON实现服务端与JavaScript之间的数据通信" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
